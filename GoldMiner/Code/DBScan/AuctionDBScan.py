@@ -20,7 +20,7 @@ def export_to_txt(directory, filename, data, formatted_date):
 
     filepath = os.path.join(directory, filename)
     with open(filepath, 'w', encoding='utf-8') as f:
-        f.write(f"{directory} - {formatted_date}\n")
+        f.write(f"{filename}\n")
         f.write("物品ID\t最低价格\t平均价格\t拍卖数量\t物品数量\t数据更新时间\n")
         for item in data:
             f.write(f"{item['item_name']}\t{item['min_price']}\t{item['ave_price']}\t{item['auction_num']}\t{item['quantity']}\t{item['scan_time']}\n")
